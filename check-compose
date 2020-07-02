@@ -88,7 +88,7 @@ fi
 topurl=https://kojipkgs.fedoraproject.org/compose/${dir}/Fedora-${rel}-${date}.${suffix}
 url=${topurl}/compose/
 arches="aarch64 ppc64le s390x"
-sb_arches="aarch64 ppc64le"
+wkst_arches="aarch64 ppc64le"
 
 result() {
     [ $1 -eq 0 ] && echo OK || echo MISSING
@@ -153,7 +153,7 @@ done
 
 echo
 echo "Checking Silverblue"
-for a in ${sb_arches}
+for a in ${wkst_arches}
 do
     image=Fedora-Silverblue-ostree-${a}-${stamp}.iso
     echo -n "${image}..."
@@ -163,7 +163,7 @@ done
 
 echo
 echo "Checking Workstation Live"
-for a in ppc64le
+for a in ${wkst_arches}
 do
     image=Fedora-Workstation-Live-${a}-${stamp}.iso
     echo -n "${image}..."
