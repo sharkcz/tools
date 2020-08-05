@@ -58,7 +58,7 @@ do
 done
 
 if [ -z "${date}" ]; then
-    date=$(date --date="yesterday" +%Y%m%d)
+    date=$(date --date="today" +%Y%m%d)
 fi
 
 echo -n "Using mode=${mode}, date=${date}, "
