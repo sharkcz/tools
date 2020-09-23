@@ -20,7 +20,7 @@ while test -n "$1"
 do
     case "$1" in
     --help)
-        echo "$(basename $0) [--rawhide] [--rc val] [--index num] [<date>]"
+        echo "$(basename $0) [--branched|--rawhide|--rc val] [--index num] [--today|--yesterday|<date>]"
         exit 0
         ;;
     --branched)
