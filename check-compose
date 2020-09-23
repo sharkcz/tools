@@ -19,7 +19,7 @@ num=0
 while test -n "$1"
 do
     case "$1" in
-    --help)
+    --help|-h)
         echo "$(basename $0) [--branched|--rawhide|--rc val] [--index num] [--today|--yesterday|<date>]"
         exit 0
         ;;
