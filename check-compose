@@ -13,7 +13,7 @@
 
 
 mode=rawhide
-rel=34
+rel=35
 num=0
 
 while test -n "$1"
