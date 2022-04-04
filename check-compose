@@ -151,14 +151,17 @@ do
     done
 done
 
-echo
-echo "Checking Silverblue"
-for a in ${wkst_arches}
+for f in Silverblue Kinoite
 do
-    image=Fedora-Silverblue-ostree-${a}-${stamp}.iso
-    echo -n "${image}..."
-    wget --spider -q ${url}/Silverblue/${a}/iso/${image}
-    result $?
+    echo
+    echo "Checking ${f}"
+    for a in ${wkst_arches}
+    do
+        image=Fedora-${f}-ostree-${a}-${stamp}.iso
+        echo -n "${image}..."
+        wget --spider -q ${url}/${f}/${a}/iso/${image}
+        result $?
+    done
 done
 
 echo
