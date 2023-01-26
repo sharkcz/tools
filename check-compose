@@ -126,6 +126,10 @@ do
         wget --spider -q ${url}/Server/${a}/iso/${image}
         result $?
     done
+    image=Fedora-Server-KVM-${stamp}.${a}.qcow2
+    echo -n "${image}..."
+    wget --spider -q ${url}/Server/${a}/images/${image}
+    result $?
 done
 
 echo
